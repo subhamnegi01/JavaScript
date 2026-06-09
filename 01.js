@@ -71,7 +71,7 @@ console.log(k === l); // This will print 'false' because each Symbol is unique, 
 
 // non-primitive data types
 
-// object, array, function
+// object, array, function.
 
 // array
 
