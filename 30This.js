@@ -6,6 +6,7 @@
 // 1: Global Context (Outside any function)
 // In browsers: window
 // In node.js: Module's exports object
+// globalThis->point global object
 
 console.log(this)
 //console.log(this==window)
@@ -17,13 +18,13 @@ console.log(this)
 // When this is used inside a regular function, it refers to the global object.
 // ii: Strict Mode
 // this will be undefined inside a function.
-"use strict"
+
 
 function greet(){
     console.log(this)
 }
 greet()
-window.greet()
+//window.greet()
 
 //***************************************************************************************************
 
@@ -55,4 +56,21 @@ obj1.greet()
 
 
 
-// Inside a cons
+// Inside a constructor or class
+// In constructor and classes, this refers to the intance of the object being created.
+
+class person{
+    constructor(name, age){
+        this.name=name,
+        this.age= age;
+    }
+}
+let a = new person("Rahul", 21);
+console.log(a)
+
+
+
+let meet = function(){
+    console.log(this)
+}
+meet();
