@@ -1,6 +1,6 @@
 // If - Else
 
-let age = 3
+let age = 3;
 
 if (age>=18){
     console.log("Eligble for vote")
