@@ -45,8 +45,21 @@ par.append(text)
 
 // ******************** Add nodes in a DOM **********************
 
-const parent = document.getElementById('root')
-const element = document.createElement('li')
-element.innerHTML= "DSA"
+// const parent = document.getElementById('root')
+// const element = document.createElement('li')
+// element.innerHTML= "DSA"
 
-parent.prepend(element)
+// // parent.prepend(element)
+
+// const child2 = parent.children[1]
+// parent.insertBefore(element, child2)
+
+
+// const parent = document.getElementById("root")
+
+// const element = document.createElement("div")
+// element.innerHTML = "Hello Coder Army"
+
+
+// // parent.insertAdjacentElement("beforebegin", element)
+// parent.insertAdjacentElement("afterend", element)
