@@ -63,3 +63,8 @@ par.append(text)
 
 // // parent.insertAdjacentElement("beforebegin", element)
 // parent.insertAdjacentElement("afterend", element)
+
+
+// Delete node or element
+
+document.querySelector('li').remove()
