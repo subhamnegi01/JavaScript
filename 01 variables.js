@@ -1,10 +1,10 @@
 // Variables in JavaScript
 
 let name = "John"
-let age = 30;
+let age = 30
 
 age = 31; // Reassigning the value of age
-console.log(name, age);
+console.log(name, age)
 
 const account = 1234;
 console.log(account)
