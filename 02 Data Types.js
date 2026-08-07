@@ -6,8 +6,8 @@ console.log(num);
 // Primitive data types (Number, boolean, string, null, undefined, symbol, bigint) is immutable, which means their value cannot be changed once they are assigned. When you assign a primitive value to a variable, it holds the actual value. If you assign that variable to another variable, it creates a copy of the value.
 
 //number
-let account_balance = 30;
-console.log(account_balance);
+let account_balance = 30
+console.log(account_balance)
 console.log(typeof account_balance)
 
 //string
@@ -17,7 +17,7 @@ console.log(typeof str)
 
 //boolean
 //true or false
-let statement = true;
+let statement = true
 console.log(statement)
 console.log(typeof statement)
 
