@@ -7,11 +7,11 @@ age = 31; // Reassigning the value of age
 console.log(name, age);
 
 const account = 1234;
-console.log(account);
+console.log(account)
 
 // Var
 if(true){
-    var a = 10;
+    var a = 10
 }
 console.log(a); // This will work because var is function-scoped, not block-scoped
 
