@@ -17,3 +17,6 @@ button.addEventListener('click', ()=>{
     const re = document.getElementById("result")
     re.textContent = "Result: " + result
 });
+
+
+// BMI Calculator

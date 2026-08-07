@@ -1,6 +1,6 @@
 // Variables in JavaScript
 
-let name = "John";
+let name = "John"
 let age = 30;
 
 age = 31; // Reassigning the value of age
