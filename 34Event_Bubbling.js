@@ -27,12 +27,26 @@
 //     body.style.backgroundColor = 'purple'
 // })
 
-const button = document.querySelectorAll('button')
-const body = document.body
 
-button.foreach((button)=>{
+// Short Code
 
-    button.addEventListener('click', ()=>{
-        body.style.backgroundColor = button.id
-    } )
+// const button = document.querySelectorAll('button')
+// const body = document.body
+
+// button.foreach((button)=>{
+
+//     button.addEventListener('click', ()=>{
+//         body.style.backgroundColor = button.id
+//     } )
+// })
+
+
+// Event Bubbling
+
+const root = document.getElementById('root')
+
+root.addEventListener('click', (event)=>{
+
+    if(event.target.tagName == 'BUTTON')
+    document.body.style.backgroundColor = event.target.id;
 })
