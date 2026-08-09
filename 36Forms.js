@@ -10,6 +10,16 @@ const form =  document.querySelector('form')
 // })
 
 
+// form.addEventListener('change', (event)=>{
+//     console.log(event.target.value)
+// })
+
+
+form.addEventListener('focusin', (event)=>{
+    console,log(event.target.value)
+})
+
+
 // form.addEventListener('submit', (event)=>{
 //     console.log("form submitted")
 // })
