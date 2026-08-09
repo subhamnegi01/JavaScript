@@ -15,9 +15,20 @@ const form =  document.querySelector('form')
 // })
 
 
-form.addEventListener('focusin', (event)=>{
-    console,log(event.target.value)
-})
+// form.addEventListener('focusin', (event)=>{
+//     console,log(event.target.value)
+// })
+
+
+// form.addEventListener('focusout', (event)=>{
+//     console.log(event.target.value)
+// })
+
+
+// form.addEventListener('reset', (event)=>{
+//     console.log(event.target.value)
+//     console.log("form Reset")
+// })
 
 
 // form.addEventListener('submit', (event)=>{
