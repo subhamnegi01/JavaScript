@@ -1,4 +1,4 @@
-const form =  document.querySelector('form')
+const form = document.querySelector('form')
 
 // form.addEventListener('click', (event)=>{
 //     console.log(event.target.id)
@@ -34,3 +34,9 @@ const form =  document.querySelector('form')
 // form.addEventListener('submit', (event)=>{
 //     console.log("form submitted")
 // })
+
+
+const data = new FormData(form)
+
+for(let [key, value] of data.entries())
+    console.log(key, value)
