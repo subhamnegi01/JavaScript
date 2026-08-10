@@ -53,4 +53,12 @@ problem.forEach((obj, index )=> {
 
     // Create 4 option
 
+    obj['options'].forEach((value)=> {
+        const label = document.createElement('label')
+        const input = document.createElement('input')
+        input.type =-"radio"
+        input.name= `q${index+1}`
+        input.value = data;
+    })
+
 });
