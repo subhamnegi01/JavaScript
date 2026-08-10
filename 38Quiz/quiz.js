@@ -24,11 +24,11 @@ const questionBank = [
 
 function RandomQuestion(){
 
-    const data = new set();
+    const data = new Set();
 
 // Use set for unique object
 
-    while(data.size!=5){
+    while(data.size != 5){
         const index = Math.floor(Math.random()*20);
         data.add(questionBank[index])
     }
@@ -38,27 +38,37 @@ function RandomQuestion(){
 }
 
 
-// Sellect the form and insert all the elements into it
+// Select the form and insert all the elements into it
 
 const form = document.querySelector('form')
 
 const problem = RandomQuestion()
+
 problem.forEach((obj, index )=> {
+
     const div_element = document.createElement('div')
     div_element.className = 'question'
+    //original_answer[`q${index+1}`]= obj['answer']
 
 
     const para = document.createElement('p')
     para.textContent = `${index+1}.${obj['question']}`
+    div_element.appendChild(para)
 
     // Create 4 option
 
-    obj['options'].forEach((value)=> {
+    obj['options'].forEach((data)=> {
         const label = document.createElement('label')
         const input = document.createElement('input')
-        input.type =-"radio"
+        input.type = "radio"
         input.name= `q${index+1}`
         input.value = data;
+
+        label.appendChild(input)
+        label.appendChild(document.createTextNode(data))
+        div_element.appendChild(label)
+        div_element.appendChild(document.createElement('br'))
     })
 
+    form.appendChild(div_element)
 });
