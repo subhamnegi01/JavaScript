@@ -28,13 +28,19 @@ function RandomQuestion(){
 
 // Use set for unique object
 
-    while(data.size != 5){
-        const index = Math.floor(Math.random()*20);
-        data.add(questionBank[index])
-    }
+    // while(data.size != 5){
+    //     const index = Math.floor(Math.random()*20);
+    //     data.add(questionBank[index])
+    // }
 
-    // Convert set into array
-    return [...data]
+    // // Convert set into array
+    // return [...data]
+
+
+    // how to sort randomly this array
+
+    questionBank.sort(()=> Math.random()-0.5)
+    return questionBank.slice(0,5)
 }
 
 
