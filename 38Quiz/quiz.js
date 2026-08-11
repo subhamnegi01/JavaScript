@@ -39,8 +39,20 @@ function RandomQuestion(){
 
     // how to sort randomly this array
 
-    questionBank.sort(()=> Math.random()-0.5)
-    return questionBank.slice(0,5)
+    // questionBank.sort(()=> Math.random()-0.5)
+    // return questionBank.slice(0,5)
+
+    const arr =[]
+    let length = questionBank.length
+    for (let i =0; i<5; i++){
+        const index = Math.floor(Math.random()*length)
+        arr.push(questionBank[index])
+
+        // Swap
+        [questionBank[index], questionBank[length-1]] = [questionBank[length-1], questionBank[index]]
+        length--;
+    }
+    return arr
 }
 
 
