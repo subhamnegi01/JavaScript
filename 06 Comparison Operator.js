@@ -3,12 +3,12 @@
 // Number to Number
 
 // == both are equal
-let a1 = 1;
-let a2 = 2;
+let a1 = 1
+let a2 = 2
 console.log(a1==a2)
 
-let a3 = 2;
-let a4 = 2;
+let a3 = 2
+let a4 = 2
 console.log(a3==a4)
 
 
