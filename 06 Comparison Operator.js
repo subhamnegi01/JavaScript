@@ -13,12 +13,12 @@ console.log(a3==a4)
 
 
 //<= less than equal to, >= greater than equal to
-let a5 = 1;
-let a6 = 2;
+let a5 = 1
+let a6 = 2
 console.log(a5>=a6)
 
-let a7 = 1;
-let a8 = 2;
+let a7 = 1
+let a8 = 2
 console.log(a7<=a8)
 
 
