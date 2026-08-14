@@ -8,27 +8,38 @@ const board_array= new Array(9).fill("E")
 
 function checkWinner(){
     for (let [index0, index1, index2] of winner){
-        if(board_array[index0]===board_array[index1]&&board_array[index1]===board_array[index2])
+        if(board_array[index0]!="E"&&board_array[index1]&&board_array[index1]===board_array[index2])
             return 1
     }
 
     return 0
 }
 
+const printer = (event) => {
+    const element = event.target;
+    if(board_array[element.id]=="E")
+        {
 
+            if(turn == 'O'){
+                element.innerHTML = 'O'
+                board_array[element.id] = "O"
+                if (checkWinner()){
+                document.getElementById('winningMessage').innerHTML = "Winner is O"
+                }
+                turn = 'X'
+            }
+            else{
+                element.innerHTML = 'X'
+                board_array[element.id] = "X"
+                if (checkWinner()){
+                    document.getElementById('winningMessage').innerHTML = "Winner is X"
+                }
+                turn = 'O'
+            }
+        }
+}
+
+board.removeEventListener('click', callbackfunction)
 
 const board = document.querySelector('.board');
-board.addEventListener('click', (event) => {
-    const element = event.target;
-    if(turn == 'O'){
-        element.innerHTML = 'O'
-        board_array[element.id] = "O"
-        if checkWinner()
-        turn = 'X'
-    }
-    else{
-        element.innerHTML = 'X'
-        board_array[element.id] = "X"
-        turn = 'O'
-    }
-});
+board.addEventListener('click',printer);
