@@ -22,10 +22,13 @@ board.addEventListener('click', (event) => {
     const element = event.target;
     if(turn == 'O'){
         element.innerHTML = 'O'
+        board_array[element.id] = "O"
+        if checkWinner()
         turn = 'X'
     }
     else{
         element.innerHTML = 'X'
+        board_array[element.id] = "X"
         turn = 'O'
     }
 });
