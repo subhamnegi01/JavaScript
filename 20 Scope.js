@@ -11,7 +11,7 @@
 function greet(){
     let a = 10;
     var b = 32;
-    const c = 324;
+    const c = 324
     console.log("Hello Coder Army")
     console.log(a,b,c)
 }
