@@ -10,7 +10,7 @@
 
 // do while loop
 
-let j = 0;
+let j = 0
 
 do{
     console.log(j)
