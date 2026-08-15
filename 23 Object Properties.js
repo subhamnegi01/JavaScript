@@ -100,5 +100,5 @@ Object.defineProperty(Object.prototype, 'toString', {
 })
 
 for(let key in customer){
-    console.log(key)
+    console.log(key);
 }
