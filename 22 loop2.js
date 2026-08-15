@@ -139,4 +139,4 @@ console.log(result1)
 const arr5 = [1, 34, 656 ,8, 9, 5]
 
 const result3= arr5.filter((num)=> num%2==0).map((num)=> num*num)
-console.log(result3)
+console.log(result3);
