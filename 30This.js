@@ -8,6 +8,7 @@
 // In node.js: Module's exports object
 // globalThis->point global object
 
+
 console.log(this)
 //console.log(this==window)
 
