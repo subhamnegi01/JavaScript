@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AstroNova | Discover Your Cosmic Path</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Animated stars -->
+    <div class="stars"></div>
+    <div class="stars stars-two"></div>
+    <div class="stars stars-three"></div>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-symbol">✦</span>
+            <span>Astro<span>Nova</span></span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#discover">Discover</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="nav-btn" onclick="scrollToDiscover()">
+            Discover Yourself
+        </button>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="small-heading">
+                    ✦ YOUR COSMIC JOURNEY BEGINS HERE ✦
+                </div>
+
+                <h1>
+                    Discover What
+                    <span>The Stars</span>
+                    Say About You
+                </h1>
+
+                <p>
+                    Enter your date of birth and uncover your zodiac sign,
+                    personality traits, lucky elements and cosmic insights.
+                </p>
+
+                <button class="primary-btn" onclick="scrollToDiscover()">
+                    Explore My Zodiac
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- Zodiac Circle -->
+
+            <div class="zodiac-container">
+
+                <div class="zodiac-glow"></div>
+
+                <div class="zodiac-orbit orbit-one"></div>
+                <div class="zodiac-orbit orbit-two"></div>
+
+                <div class="zodiac-center">
+
+                    <div class="moon">☾</div>
+
+                    <div class="center-text">
+                        <small>YOUR</small>
+                        <strong>ZODIAC</strong>
+                    </div>
+
+                </div>
+
+                <div class="zodiac zodiac-1">♈</div>
+                <div class="zodiac zodiac-2">♉</div>
+                <div class="zodiac zodiac-3">♊</div>
+                <div class="zodiac zodiac-4">♋</div>
+                <div class="zodiac zodiac-5">♌</div>
+                <div class="zodiac zodiac-6">♍</div>
+                <div class="zodiac zodiac-7">♎</div>
+                <div class="zodiac zodiac-8">♏</div>
+                <div class="zodiac zodiac-9">♐</div>
+                <div class="zodiac zodiac-10">♑</div>
+                <div class="zodiac zodiac-11">♒</div>
+                <div class="zodiac zodiac-12">♓</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DISCOVER SECTION -->
+
+        <section class="discover-section" id="discover">
+
+            <div class="section-title">
+
+                <span>✦ ASTROLOGY PROFILE ✦</span>
+
+                <h2>
+                    Enter Your
+                    <em>Birth Details</em>
+                </h2>
+
+                <p>
+                    Your journey through the stars starts with three simple details.
+                </p>
+
+            </div>
+
+
+            <div class="birth-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <h3>When were you born?</h3>
+                        <p>Tell us your birth date to reveal your zodiac identity.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="date-inputs">
+
+                    <div class="input-group">
+
+                        <label for="birthDate">DATE</label>
+
+                        <select id="birthDate">
+
+                            <option value="">Day</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="birthMonth">MONTH</label>
+
+                        <select id="birthMonth">
+
+                            <option value="">Month</option>
+
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="birthYear">BIRTH YEAR</label>
+
+                        <select id="birthYear">
+
+                            <option value="">Year</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <p class="error-message" id="errorMessage"></p>
+
+
+                <button class="calculate-btn" onclick="calculateZodiac()">
+
+                    <span>✦</span>
+                    Reveal My Cosmic Profile
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section class="result-section" id="resultSection">
+
+            <div class="result-header">
+
+                <span>✦ YOUR COSMIC PROFILE ✦</span>
+
+                <h2>
+                    You Are
+                    <strong id="resultSign">Aries</strong>
+                </h2>
+
+                <p id="resultDate">
+                    Born on your cosmic date
+                </p>
+
+            </div>
+
+
+            <div class="main-result-card">
+
+                <div class="result-symbol" id="resultSymbol">
+                    ♈
+                </div>
+
+                <div class="result-main-info">
+
+                    <span id="resultElement">
+                        FIRE SIGN
+                    </span>
+
+                    <h3 id="resultTitle">
+                        The Fearless Pioneer
+                    </h3>
+
+                    <p id="resultDescription">
+                        Your cosmic profile is waiting to be discovered.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Stats -->
+
+            <div class="stats-grid">
+
+                <div class="info-card">
+
+                    <span class="info-icon">🍀</span>
+
+                    <div>
+                        <small>LUCKY NUMBER</small>
+                        <strong id="luckyNumber">7</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">🎨</span>
+
+                    <div>
+                        <small>LUCKY COLOR</small>
+                        <strong id="luckyColor">Gold</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">💎</span>
+
+                    <div>
+                        <small>LUCKY STONE</small>
+                        <strong id="luckyStone">Ruby</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">🌟</span>
+
+                    <div>
+                        <small>ELEMENT</small>
+                        <strong id="elementName">Fire</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Personality -->
+
+            <div class="personality-card">
+
+                <div class="sub-heading">
+                    ✦ PERSONALITY
+                </div>
+
+                <h3>Your Cosmic Personality</h3>
+
+                <div class="traits" id="traitsContainer">
+                    <!-- JS -->
+                </div>
+
+            </div>
+
+
+            <!-- Life Areas -->
+
+            <div class="life-grid">
+
+                <div class="life-card">
+
+                    <div class="life-icon">
+                        ❤️
+                    </div>
+
+                    <span>LOVE</span>
+
+                    <h3>Relationships</h3>
+
+                    <p id="loveText">
+                        Your relationship insight will appear here.
+                    </p>
+
+                </div>
+
+
+                <div class="life-card">
+
+                    <div class="life-icon">
+                        💼
+                    </div>
+
+                    <span>CAREER</span>
+
+                    <h3>Professional Life</h3>
+
+                    <p id="careerText">
+                        Your career insight will appear here.
+                    </p>
+
+                </div>
+
+
+                <div class="life-card">
+
+                    <div class="life-icon">
+                        💰
+                    </div>
+
+                    <span>FINANCE</span>
+
+                    <h3>Money & Growth</h3>
+
+                    <p id="financeText">
+                        Your financial insight will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button class="reset-btn" onclick="resetProfile()">
+                ↻ Discover Another Profile
+            </button>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <span>✦ ABOUT ASTRONOVA</span>
+
+                <h2>
+                    Explore The
+                    <em>Language Of The Stars</em>
+                </h2>
+
+                <p>
+                    AstroNova is a modern astrology experience designed to
+                    turn your birth date into a beautiful cosmic profile.
+                    Discover zodiac characteristics, elements, lucky symbols
+                    and personalized insights through an elegant celestial
+                    interface.
+                </p>
+
+            </div>
+
+
+            <div class="about-features">
+
+                <div>
+                    <span>01</span>
+                    <h3>Simple</h3>
+                    <p>Enter just three birth details.</p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <h3>Instant</h3>
+                    <p>Get your zodiac profile instantly.</p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <h3>Beautiful</h3>
+                    <p>Experience astrology in a modern way.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+            <span class="logo-symbol">✦</span>
+            Astro<span>Nova</span>
+        </div>
+
+        <p>
+            © 2026 AstroNova. Explore responsibly.
+        </p>
+
+        <p class="disclaimer">
+            Astrology content is intended for entertainment and
+            self-reflection purposes.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
