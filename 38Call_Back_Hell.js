@@ -2,16 +2,28 @@
 
 
 // callback function
-function fetchuser(callback){
+function fetchuser(){
     console.log("Fetching the user detail...")
     setTimeout(()=>{
         console.log("Data fetched successfully")
-        const name = "John"
-        callback(name)
+        const obj = {
+            name: "John",
+            age: 23,
+            city: "New York"
+        }
+        printAge(obj)
     }, 2000)
 }
-function greet(name){
-    console.log(`Hello ${name}`)
+function greet(obj){
+    console.log(`Hello ${obj.name}`)
+}
+function meet(obj){
+    console.log(`Hello ${obj.name}, nice to meet you!`)
 }
 
-fetchuser(greet)
+function printAge(obj){
+    console.log(`user ${obj.age} years old`)
+}
+
+// fetchuser(greet)
+fetchuser(meet)
