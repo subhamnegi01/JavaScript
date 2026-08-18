@@ -1,5 +1,5 @@
 /* =========================
-   CREATE DAY OPTIONS
+    CREATE DAY OPTIONS
 ========================= */
 
 const birthDate = document.getElementById("birthDate");
@@ -17,7 +17,7 @@ for (let day = 1; day <= 31; day++) {
 
 
 /* =========================
-   CREATE YEAR OPTIONS
+    CREATE YEAR OPTIONS
 ========================= */
 
 const currentYear = new Date().getFullYear();
