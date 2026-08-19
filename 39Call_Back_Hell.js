@@ -44,7 +44,7 @@ placeOrder(()=>{
     preparingOrder(()=>{
         pickupOrder(()=>{
             deliverOrder(()=>{
-                
+
             })
         })
     })
