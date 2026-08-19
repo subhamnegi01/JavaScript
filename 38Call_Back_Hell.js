@@ -11,9 +11,23 @@ function fetchuser(){
             age: 23,
             city: "New York"
         }
+        meet(obj)
+    }, 2000)
+}
+
+function fetchuser1(){
+    console.log("Fetching the user detail...")
+    setTimeout(()=>{
+        console.log("Data fetched successfully")
+        const obj = {
+            name: "John",
+            age: 23,
+            city: "New York"
+        }
         printAge(obj)
     }, 2000)
 }
+
 function greet(obj){
     console.log(`Hello ${obj.name}`)
 }
@@ -26,4 +40,12 @@ function printAge(obj){
 }
 
 // fetchuser(greet)
-fetchuser(meet)
+fetchuser1()
+
+
+function fetchuser(callback){
+    console.log("Fetched info of the user...")
+    setTimeout(()=>{
+        console.log("Data fetched successfully")
+    }, 2000)
+}
