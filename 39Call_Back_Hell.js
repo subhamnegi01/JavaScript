@@ -15,4 +15,18 @@ function preparingOrder(){
 }
 
 
-preparingOrder()
+function pickupOrder(){
+    console.log("Reaching retaurant to pickup your order...")
+
+    setTimeout(() => {
+        console.log("Order picked up successfully")
+    }, 3000)
+}
+
+function deliverOrder(){
+    console.log("Delivery boy on the way")
+
+    setTimeout(() => {
+        console.log("Order delivered successfully")
+    }, 50000)
+}
