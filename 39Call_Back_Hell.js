@@ -8,7 +8,7 @@ function placeOrder(callback) {
     setTimeout(() => {
         console.log("Order placed successfully")
         callback()
-    }, 2000)
+    }, 2000);
 }
 
 function preparingOrder(callback) {
