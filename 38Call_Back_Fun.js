@@ -36,7 +36,7 @@ function meet(obj){
 }
 
 function printAge(obj){
-    console.log(`user ${obj.age} years old`)
+    console.log(`user ${obj.age} years old`);
 }
 
 // fetchuser(greet)
