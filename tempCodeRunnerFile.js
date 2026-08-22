@@ -1,3 +1,3 @@
-callback = ()=>{
-//     preparingOrder()
-// }
+    pro2.then((data)=>{
+        console.log(data)
+    })
