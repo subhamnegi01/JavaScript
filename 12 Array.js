@@ -3,6 +3,7 @@ console.log(arr)
 console.log(arr.length)
 console.log(arr[4])
 
+
 //at is latest. It take the negative index
 console.log(arr.at(4))
 console.log(arr.at(-6))
