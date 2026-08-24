@@ -2,15 +2,14 @@
 // weather
 
 
-const Promises =  fetch('https://api.weatherapi.com/v1/current.json?key=c690c2b4b7b746f895833500262208&q=London&aqi=no')
+// Promises
+// .then(response=>response.json())
+// .then(data=>console.log(data))
 
-const pro2 = Promises.then((response)=>{
-    return response.json()
-})
-
-pro2.then((data)=>{
-    console.log(data)
-})
+fetch('https://api.weatherapi.com/v1/current.json?key=c690c2b4b7b746f895833500262208&q=London&aqi=no')
+.then(response=>response.json())
+.then(data=>console.log(data.current.temp_c))
+.catch(error=>console.log(error))
 
 
 // Promises.then((response)=>{
