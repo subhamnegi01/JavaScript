@@ -79,28 +79,34 @@
 // // .catch(error=>console.log(error));
 
 
-const p1 = new Promise((resolve,reject)=>{
+function test1(){
+    const p1 = new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("Promise 1 resolved");
-    },8000)
-})
+    },5000)
+    })
+    return p1;
+}
 // p1.then((response)=>console.log(response))
 
-const p2 = new Promise((resolve,reject)=>{
+function test2(){
+    const p2 = new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("Promise 2 resolved");
     },5000)
-})
+    })
+    return p2;
+}
 
-p1.then(value=>console.log(value))
-p2.then(value=>console.log(value))
+// p1.then(value=>console.log(value))
+// p2.then(value=>console.log(value))
 
-// async function greet(){
-//     const data1 = await p1;
-//     console.log(data1)
+async function greet(){
+    const data1 = await test1();
+    console.log(data1)
 
-//     const data2 = await p2;
-//     console.log(data2)
-// }
+    const data2 = await test2();
+    console.log(data2)
+}
 
-// greet()
+greet()
