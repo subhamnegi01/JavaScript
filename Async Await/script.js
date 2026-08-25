@@ -1,11 +1,11 @@
 function placeOrder(cart){
     console.log("Talking with Domino's");
-     
+    
     const pr = new Promise(function(resolve,reject){
 
         setTimeout(()=>{
             
-           const food_available = true;
+            const food_available = true;
             if(food_available){
             console.log("Order Placed Succesfully");
             const order = {orderId: 221 , food: cart , restaurant: "Dominos", location:"Dwarka"}
@@ -14,7 +14,7 @@ function placeOrder(cart){
             else{
                 reject("Items Out of Stocks");
             }
-           },2000)
+            },2000)
 
     })
 
@@ -49,6 +49,7 @@ function pickupOrder(foodDetails){
 
     })
 
+    return pr;
     
 }
 
@@ -60,10 +61,13 @@ function deliverOrder(droplocation){
     },5000)
 }
 
-const order = placeOrder(cart)
-const foodDetails = preparingOrder(order)
-const droplocation = pickupOrder(foodDetails)
-deliverOrder(droplocation)
+
+
+
+const order = await placeOrder(["Pizza","Coke","Garlic Bread"]);
+const foodDetails = await preparingOrder(order);
+const droplocation = await pickupOrder(foodDetails);
+await deliverOrder(droplocation);
 
 // placeOrder(cart)
 // .then(order=>preparingOrder(order))
