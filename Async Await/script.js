@@ -82,7 +82,7 @@
 const p1 = new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("Promise 1 resolved");
-    },5000)
+    },8000)
 })
 // p1.then((response)=>console.log(response))
 
@@ -92,12 +92,15 @@ const p2 = new Promise((resolve,reject)=>{
     },5000)
 })
 
-async function greet(){
-    const data1 = await p1;
-    console.log(data1)
+p1.then(value=>console.log(value))
+p2.then(value=>console.log(value))
 
-    const data2 = await p2;
-    console.log(data2)
-}
+// async function greet(){
+//     const data1 = await p1;
+//     console.log(data1)
 
-greet()
+//     const data2 = await p2;
+//     console.log(data2)
+// }
+
+// greet()
