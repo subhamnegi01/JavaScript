@@ -29,7 +29,7 @@ const user2 = Object.assign({},user)
 console.log(user2)
 user2.address.PIN= 263624
 user2.name = "Mohit"
-console.log(user)
+console.log(user);
 
 
 // Destructing of an object
