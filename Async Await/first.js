@@ -45,7 +45,7 @@ function pickupOrder(foodDetails){
             console.log("Order picked up by Delivery Boy");
             const droplocation = foodDetails.location;
             resolve(droplocation);
-           },3000)
+            },3000)
 
     })
 
