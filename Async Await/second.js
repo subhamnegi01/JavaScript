@@ -4,7 +4,7 @@ function test1(){
         resolve("Promise 1 resolved");
     },5000)
     })
-    return p1;
+    return p1
 }
 
 
