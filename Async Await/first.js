@@ -69,7 +69,7 @@ async function greet(){
         const foodDetails = await preparingOrder(order);
         const droplocation = await pickupOrder(foodDetails);
         await deliverOrder(droplocation);
-    } 
+    }
     catch(error){
         console.log(error);
 
